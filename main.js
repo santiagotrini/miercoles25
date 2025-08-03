@@ -6,10 +6,10 @@ function calcularCuantoFalta(timerId) {
   // crea un objeto fecha con la fecha y hora actual
   let now = new Date(); 
   // crea un objeto fecha con la fecha '2025-07-18 18:00:00'
-  let targetDate = new Date('2025-07-18 18:00:00');
+  let targetDate = new Date('2025-12-19 12:15:00');
   let diff = targetDate - now;
   if (diff <= 0) {
-    h1.textContent = 'Son VACACIONES DE INVIERNO, DISFRUTA!!!';
+    h1.textContent = 'Son VACACIONES DE VERANO, DISFRUTA!!!';
     clearInterval(timerId);
     return; // sali de la funcion
   }
@@ -24,7 +24,7 @@ function calcularCuantoFalta(timerId) {
   diff  %= (1000*60);
   let s  = Math.floor(diff / 1000);   
   // DEBUG: console.log(d,h,m,s);
-  h1.textContent = `Faltan ${d} dias, ${h} horas, ${m} minutos y ${s} segundos para las VACACIONES DE INVIERNO!!! 😃 🎉`;
+  h1.textContent = `Faltan ${d} dias, ${h} horas, ${m} minutos y ${s} segundos para las VACACIONES DE VERANO!!! 😃 🎉`;
 }
 // uso una funcion anonima como wrapper de calcularCuantoFalta
 let timerId = setInterval(() => {
