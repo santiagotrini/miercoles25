@@ -16,6 +16,8 @@ function calcularCuantoFalta(timerId) {
   // diff es la resta de las 2 fechas en milisegundos
   // haciendo cuentas para pasar de ms a dias, horas
   // minutos, segundos...
+  let w = Math.floor(diff / (1000*60*60*24*7));
+  diff  %= (1000*60*60*24*7);
   let d  = Math.floor(diff / (1000*60*60*24));
   diff  %= (1000*60*60*24);
   let h  = Math.floor(diff / (1000*60*60));
@@ -24,7 +26,7 @@ function calcularCuantoFalta(timerId) {
   diff  %= (1000*60);
   let s  = Math.floor(diff / 1000);   
   // DEBUG: console.log(d,h,m,s);
-  h1.textContent = `Faltan ${d} dias, ${h} horas, ${m} minutos y ${s} segundos para las VACACIONES ☹️`;
+  h1.textContent = `Faltan ${w} semanas, ${d} dias, ${h} horas, ${m} minutos y ${s} segundos para las VACACIONES ☹️`;
 }
 // uso una funcion anonima como wrapper de calcularCuantoFalta
 let timerId = setInterval(() => {
