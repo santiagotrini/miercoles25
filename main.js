@@ -6,7 +6,7 @@ function calcularCuantoFalta(timerId) {
   // crea un objeto fecha con la fecha y hora actual
   let now = new Date(); 
   // crea un objeto fecha con la fecha '2025-07-18 18:00:00'
-  let targetDate = new Date('2025-12-19 12:15:00');
+  let targetDate = new Date('2025-10-31 12:15:00');
   let diff = targetDate - now;
   if (diff <= 0) {
     h1.textContent = 'Son VACACIONES DE VERANO, DISFRUTA!!!';
